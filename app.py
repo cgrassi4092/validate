@@ -1,5 +1,4 @@
-from flask import Flask
-from flask_wtf.csrf import CSRFProtect
+from flask import Flask, CSRFProtect
 
 csrf = CSRFProtect(app)
 app = Flask(__name__)
