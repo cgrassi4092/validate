@@ -13,10 +13,15 @@ dist: xenial
 install:                                                                                                                                                                                                 
   - pip install flask
 
+addons:                                                                                                                                           
+  sonarcloud:                                                                                                                                     
+    organization: gabydias-github                                                                                                                 
+    token: ${SONAR_TOKEN}
 
 # Defini o script de Teste que deve rodar toda vez que o código for alterado.                                                                                                                            
 script:                                                                                                                                                                                                  
   - python -m unittest -v test || travis_terminate 1;
+  - sonar-scanner || travis_terminate 1;
 
 # Definir o Deploy no Heroku
 deploy:
