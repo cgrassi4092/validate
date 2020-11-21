@@ -19,6 +19,6 @@ deploy:
   provider: heroku
   api_key: $HEROKU_API_KEY
   edge: true 
-  app: devopslab-gabriela
+  app: devopslabs-gabriela
   on:
       branch: main
