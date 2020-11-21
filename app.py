@@ -1,5 +1,7 @@
 from flask import Flask
+from flask_wtf.csrf import CSRFProtect
 
+csrf = CSRFProtect(app)
 app = Flask(__name__)
 
 @app.route("/")
@@ -8,4 +10,3 @@ def pagina_inicial():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
