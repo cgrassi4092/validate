@@ -11,7 +11,7 @@ dist: xenial
 
 # Instalação de Módulos que são necessários para a Aplicação.                                                                                                                                            
 install:                                                                                                                                                                                                 
-  - pip install flask
+  - pip install flask flask-wtf 
 
 addons:                                                                                                                                           
   sonarcloud:                                                                                                                                     
